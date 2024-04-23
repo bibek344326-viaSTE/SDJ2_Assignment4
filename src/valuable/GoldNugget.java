@@ -1,12 +1,12 @@
 package valuable;
 
-public class Diamond implements Valuable {
+public class GoldNugget implements Valuable {
     private String name;
     private double value;
 
-    public Diamond() {
-        this.name = "Diamond";
-        this.value = 50;
+    public GoldNugget() {
+        this.name = "GoldNugget";
+        this.value = 10;
     }
 
     @Override

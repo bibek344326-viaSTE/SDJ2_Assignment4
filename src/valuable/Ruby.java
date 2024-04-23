@@ -1,12 +1,12 @@
 package valuable;
 
-public class Diamond implements Valuable {
+public class Ruby implements Valuable {
     private String name;
     private double value;
 
-    public Diamond() {
-        this.name = "Diamond";
-        this.value = 50;
+    public Ruby() {
+        this.name = "Ruby";
+        this.value = 25;
     }
 
     @Override
