@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Log {
     private static Log instance;
-    private static Lock lock = new ReentrantLock();
+    private static Object lock = new Object();
 
     private Log() {
     }
