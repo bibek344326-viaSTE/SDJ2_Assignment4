@@ -6,7 +6,7 @@ public class Jewel implements Valuable {
 
     public Jewel() {
         this.name = "Jewel";
-        this.value = 10;
+        this.value = 5;
     }
 
     @Override
