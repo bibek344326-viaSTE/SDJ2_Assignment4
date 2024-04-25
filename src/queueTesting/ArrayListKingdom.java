@@ -1,4 +1,4 @@
-package QueueTesting;
+package queueTesting;
 
 public class ArrayListKingdom<T> implements ListADT<T> {
     private int DEFAULT_CAPACITY = 100;

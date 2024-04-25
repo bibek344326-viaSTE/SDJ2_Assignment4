@@ -1,4 +1,4 @@
-package QueueTesting;
+package queueTesting;
 
 public interface ListADT<T> {
     public void add(int index, T element);
