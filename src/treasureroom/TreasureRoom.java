@@ -9,7 +9,7 @@ import valuable.WoodenCoin;
 
 import java.util.ArrayList;
 
-public class TreasureRoom {
+public class TreasureRoom implements Door {
     private ArrayList<Valuable> valuables;
     private Log logger;
 
@@ -71,5 +71,24 @@ public class TreasureRoom {
                 "\n\t\t\tNumber of Jewels: " + countJewels + "\tJewels Value: " + jewelsValue +
                 "\n\t\t\tNumber of Gold Nuggets: " + countGoldNuggets + "\tGold Nuggets Value: " + goldNuggetsValue +
                 "\n\t\t\tNumber of Diamonds: " + countDiamonds + "\tDiamonds Value: " + diamondsValue);
+    }
+    @Override
+    public void acquireRead() {
+        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
+    }
+
+    @Override
+    public void acquireWrite() {
+        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
+    }
+
+    @Override
+    public void releaseRead() {
+        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
+    }
+
+    @Override
+    public void releaseWrite() {
+        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 }

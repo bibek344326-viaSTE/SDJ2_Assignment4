@@ -8,11 +8,12 @@ public interface Door {
 
     Valuable takeOut() throws Exception;
 
-    void readValuables();
+    void countValuables();
 
     void acquireRead();
     void acquireWrite();
     void releaseRead();
     void releaseWrite();
 }
+
 
