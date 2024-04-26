@@ -1,22 +1,44 @@
 package valuable;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Mine {
-    public Valuable getValuable() {
-        int a = new Random().nextInt(22);
-        if (a > 0 && a <= 10) {
-            return new WoodenCoin();
-        } else if (a > 10 && a <= 15) {
-            return new Jewel();
-        } else if (a > 15 && a <= 18) {
-            return new GoldNugget();
-        } else if (a > 18 && a <= 20) {
-            return new Ruby();
-        } else if (a==21) {
-            return new Diamond();
-        }
-        else throw new RuntimeException("Invalid random generated, hint: check the boundary of the random");
+    private static final Map<String, Integer> valuablesMap = new HashMap<>();
+    private static final Random random = new Random();
 
+    private Mine() {
+    }
+
+    public static synchronized Valuable getValuable() {
+        String[] types = {"WoodenCoin", "Jewel", "GoldNugget", "Ruby", "Diamond"};
+
+        // Generate a random index to select a type
+        int randomIndex = random.nextInt(types.length);
+
+        // Get the selected type
+        String selectedType = types[randomIndex];
+
+        // Increment the count for the selected type
+        int count = valuablesMap.getOrDefault(selectedType, 0);
+        valuablesMap.put(selectedType, count + 1);
+
+
+        // Create and return the corresponding Valuable instance
+        switch (selectedType) {
+            case "WoodenCoin":
+                return new WoodenCoin();
+            case "Jewel":
+                return new Jewel();
+            case "GoldNugget":
+                return new GoldNugget();
+            case "Ruby":
+                return new Ruby();
+            case "Diamond":
+                return new Diamond();
+            default:
+                throw new RuntimeException("Invalid valuable type: " + selectedType);
+        }
     }
 }

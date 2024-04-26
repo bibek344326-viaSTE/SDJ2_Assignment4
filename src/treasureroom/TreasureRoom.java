@@ -29,7 +29,7 @@ public class TreasureRoom implements Door {
         return valuables.remove(0);
     }
 
-    public void countValuables() {
+    public synchronized void countValuables() {
         int countWoodenCoins = 0;
         int countRubies = 0;
         int countJewels = 0;
@@ -73,22 +73,22 @@ public class TreasureRoom implements Door {
                 "\n\t\t\tNumber of Diamonds: " + countDiamonds + "\tDiamonds Value: " + diamondsValue);
     }
     @Override
-    public void acquireRead() {
+    public synchronized void acquireRead() {
         // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
-    public void acquireWrite() {
+    public synchronized void acquireWrite() {
         // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
-    public void releaseRead() {
+    public synchronized void releaseRead() {
         // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
-    public void releaseWrite() {
+    public synchronized void releaseWrite() {
         // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 }

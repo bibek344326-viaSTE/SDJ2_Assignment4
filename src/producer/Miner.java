@@ -6,20 +6,18 @@ import valuable.Valuable;
 
 public class Miner implements Runnable {
     private Deposit deposit;
-    private Mine mine;
 
-    public Miner (Deposit deposit, Mine mine) {
-        this.deposit=deposit;
-        this.mine=mine;
+    public Miner(Deposit deposit) {
+        this.deposit = deposit;
     }
 
 
     @Override
     public void run() {
-        while(true) {
-            Valuable valuable =  mine.getValuable();
+        while (true) {
+            Valuable valuable = Mine.getValuable();
             deposit.add(valuable);
-            try{
+            try {
                 Thread.sleep(8000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
