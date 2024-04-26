@@ -14,7 +14,7 @@ public class Accountant implements Runnable{
         while (true) {
 
             treasureRoomDoor.acquireRead();
-            treasureRoomDoor.readValuables();
+            treasureRoomDoor.countValuables();
             treasureRoomDoor.releaseRead();
             try {
                 Thread.sleep(10000);
