@@ -23,16 +23,13 @@ public class GuardsMan implements Door {
 
     @Override
     public Valuable takeOut() throws Exception {
-//        acquireWrite();
         return door.takeOut();
 
     }
 
     @Override
     public void countValuables() {
-//        acquireRead();
         door.countValuables();
-//        releaseRead();
     }
 
     public synchronized void acquireRead() {

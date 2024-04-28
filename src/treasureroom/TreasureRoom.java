@@ -74,21 +74,17 @@ public class TreasureRoom implements Door {
     }
     @Override
     public synchronized void acquireRead() {
-        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
     public synchronized void acquireWrite() {
-        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
     public synchronized void releaseRead() {
-        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 
     @Override
     public synchronized void releaseWrite() {
-        // This method is implemented by the genius guard. Have absolutely no idea what to do here....todo ASK TROELS....
     }
 }
